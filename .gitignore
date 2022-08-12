@@ -4,6 +4,9 @@
 ### Querydsl ###
 /src/main/generated
 
+### JPA Buddy ###
+.jpb/
+
 ### Eclipse ###
 .metadata
 bin/
