@@ -1,7 +1,7 @@
 package com.board.projectboard.controller;
 
 import com.board.projectboard.config.SecurityConfig;
-import com.board.projectboard.domain.type.SearchType;
+import com.board.projectboard.domain.constant.SearchType;
 import com.board.projectboard.dto.ArticleWithCommentsDto;
 import com.board.projectboard.dto.UserAccountDto;
 import com.board.projectboard.service.ArticleService;
@@ -130,7 +130,7 @@ class ArticleControllerTest {
         // Given
         Long articleId = 1L;
         long totalCount = 1L;
-        given(articleService.getArticle(articleId)).willReturn(createArticleWithCommentsDto());
+        given(articleService.getArticleWithComments(articleId)).willReturn(createArticleWithCommentsDto());
         given(articleService.getArticleCount()).willReturn(totalCount);
 
         // When & Then
@@ -141,7 +141,7 @@ class ArticleControllerTest {
                 .andExpect(model().attributeExists("article"))
                 .andExpect(model().attributeExists("articleComments"))
                 .andExpect(model().attribute("totalCount", totalCount));
-        then(articleService).should().getArticle(articleId);
+        then(articleService).should().getArticleWithComments(articleId);
         then(articleService).should().getArticleCount();
     }
 
