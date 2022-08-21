@@ -1,12 +1,14 @@
 -- 테스트 계정
 -- TODO: 테스트용이지만 비밀번호가 노출된 데이터 세팅. 개선하는 것이 좋을 지 고민해 보자.
 insert into user_account (user_id, user_password, nickname, email, memo, created_at, created_by, modified_at, modified_by) values
-('eoghks', 'eoghks1234', 'Eoghks', 'eoghks@gmail.com', 'I am eoghks', now(), 'eoghks', now(), 'eoghks');
+('eoghks', 'eoghks1234', 'Eoghks', 'eoghks@gmail.com', 'I am Eoghks', now(), 'eoghks', now(), 'eoghks');
+insert into user_account (user_id, user_password, nickname, email, memo, created_at, created_by, modified_at, modified_by) values
+    ('eoghks2', 'eoghks1234', 'Eoghks2', 'eoghks2@gmail.com', 'I am Eoghks2', now(), 'eoghks2', now(), 'eoghks2');
 
 -- 100 게시글
-insert into article (user_account_id, title, content, hashtag, created_by, modified_by, created_at, modified_at) values (1, 'Quisque porta volutpat erat.', 'Duis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus.', 'Puce', 'Austine', 'Yvon', '2021-09-10 13:45:16', '2021-02-09 13:34:53');
-insert into article (user_account_id, title, content, hashtag, created_by, modified_by, created_at, modified_at) values (1, 'Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis.', 'Quisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla. Nunc purus.', null, 'Spike', 'Major', '2021-05-14 11:07:17', '2021-07-02 07:12:33');
-insert into article (user_account_id, title, content, hashtag, created_by, modified_by, created_at, modified_at) values (1, 'Duis bibendum.', 'Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris.', 'Aquamarine', 'Wendye', 'Binky', '2021-07-25 06:33:03', '2021-03-01 10:07:59');
+insert into article (user_account_id, title, content, hashtag, created_by, modified_by, created_at, modified_at) values (2, 'Quisque porta volutpat erat.', 'Duis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus.', 'Puce', 'Austine', 'Yvon', '2021-09-10 13:45:16', '2021-02-09 13:34:53');
+insert into article (user_account_id, title, content, hashtag, created_by, modified_by, created_at, modified_at) values (2, 'Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis.', 'Quisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla. Nunc purus.', null, 'Spike', 'Major', '2021-05-14 11:07:17', '2021-07-02 07:12:33');
+insert into article (user_account_id, title, content, hashtag, created_by, modified_by, created_at, modified_at) values (2, 'Duis bibendum.', 'Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris.', 'Aquamarine', 'Wendye', 'Binky', '2021-07-25 06:33:03', '2021-03-01 10:07:59');
 insert into article (user_account_id, title, content, hashtag, created_by, modified_by, created_at, modified_at) values (1, 'In quis justo.', 'Curabitur at ipsum ac tellus semper interdum. Mauris ullamcorper purus sit amet nulla. Quisque arcu libero, rutrum ac, lobortis vel, dapibus at, diam.', 'Mauv', 'Madelyn', 'Bradney', '2021-03-15 18:04:18', '2021-05-25 14:15:18');
 insert into article (user_account_id, title, content, hashtag, created_by, modified_by, created_at, modified_at) values (1, 'Donec dapibus.', 'Maecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat.', null, 'Alano', 'Claudio', '2021-04-09 14:01:42', '2021-08-11 08:06:36');
 insert into article (user_account_id, title, content, hashtag, created_by, modified_by, created_at, modified_at) values (1, 'Nunc rhoncus dui vel sem.', 'Suspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst.', null, 'Orazio', 'Tynan', '2021-07-19 09:43:27', '2021-11-23 11:04:32');
