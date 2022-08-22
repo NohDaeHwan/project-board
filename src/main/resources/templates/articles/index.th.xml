@@ -59,7 +59,7 @@
             <attr sel="li[0]/a"
                   th:text="'previous'"
                   th:href="@{/articles(page=${articles.number - 1},
-                      sort=${param.sort} + (*{sort.getOrderFor('param.sort')} != null ? (*{sort.getOrderFor('param.sort').direction.name} != 'DESC' ? ',desc' : '') : ''),
+                      sort=(${param.sort} != null ? ${param.sort} : '') + (*{sort.getOrderFor('param.sort')} != null ? (*{sort.getOrderFor('param.sort').direction.name} != 'DESC' ? ',desc' : '') : ''),
                       searchType=${param.searchType}, searchValue=${param.searchValue}
                   )}"
                   th:class="'page-link' + (${articles.number} <= 0 ? ' disabled' : '')"
@@ -68,7 +68,7 @@
                 <attr sel="a"
                       th:text="${pageNumber + 1}"
                       th:href="@{/articles(page=${pageNumber},
-                          sort=${param.sort} + (*{sort.getOrderFor('param.sort')} != null ? (*{sort.getOrderFor('param.sort').direction.name} != 'DESC' ? ',desc' : '') : ''),
+                          sort=(${param.sort} != null ? ${param.sort} : '') + (*{sort.getOrderFor('param.sort')} != null ? (*{sort.getOrderFor('param.sort').direction.name} != 'DESC' ? ',desc' : '') : ''),
                           searchType=${param.searchType}, searchValue=${param.searchValue}
                       )}"
                       th:class="'page-link' + (${pageNumber} == ${articles.number} <= 0 ? ' disabled' : '')"
@@ -77,7 +77,7 @@
             <attr sel="li[2]/a"
                   th:text="'next'"
                   th:href="@{/articles(page=${articles.number + 1},
-                      sort=${param.sort} + (*{sort.getOrderFor('param.sort')} != null ? (*{sort.getOrderFor('param.sort').direction.name} != 'DESC' ? ',desc' : '') : ''),
+                      sort=(${param.sort} != null ? ${param.sort} : '') + (*{sort.getOrderFor('param.sort')} != null ? (*{sort.getOrderFor('param.sort').direction.name} != 'DESC' ? ',desc' : '') : ''),
                       searchType=${param.searchType}, searchValue=${param.searchValue}
                   )}"
                   th:class="'page-link' + (${articles.number} >= ${articles.totalPages - 1} ? ' disabled' : '')"
