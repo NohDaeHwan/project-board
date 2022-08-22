@@ -1,4 +1,4 @@
-package com.board.projectboard.request;
+package com.board.projectboard.dto.request;
 
 import com.board.projectboard.dto.ArticleDto;
 import com.board.projectboard.dto.UserAccountDto;
